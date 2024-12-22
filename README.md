@@ -1,5 +1,5 @@
 # HackMate
-[![pipeline status](https://gitlab.crja72.ru/django/2024/autumn/course/projects/team-5/badges/main/pipeline.svg)](https://gitlab.crja72.ru/django/2024/autumn/course/projects/team-5/commits/main)
+
 
 ## Удобный сервис по поиску сокомандников для хакатонов
 
