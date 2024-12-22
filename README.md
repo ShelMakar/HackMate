@@ -110,6 +110,8 @@ dump-env --template=.env.template --prefix='SECRET_ENV_' > .env
 ## Важно!
 Чтобы регистрация работала корректно, выполните действия описаные в [документации](https://yandex.ru/support/yandex-360/customers/mail/ru/mail-clients/others.html)
 
+---
+
 Перейдите в каталог `hackmate`:
 ```bash
 cd hackmate
