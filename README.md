@@ -53,7 +53,7 @@ HackMate предоставляет простой и удобный инстр�
 ### Клонирование репозитория
 Клонируйте проект с помощью команды:
 ```bash
-git clone https://gitlab.crja72.ru/django/2024/autumn/course/projects/team-5.git
+git clone https://github.com/ShelMakar/HackMate.git
 ```
 
 ### Создание виртуальной среды
@@ -174,11 +174,11 @@ python manage.py runserver
 
 
 ## 👥 Авторы
-- **Косьмин Георгий**  
-  [GitHub](https://github.com/kiper-acab) | [Telegram](https://t.me/KIPERQW)
-
 - **Шеляг Макар**  
   [GitHub](https://github.com/ShelMakar) | [Telegram](https://t.me/shel_makar)
+
+- **Косьмин Георгий**  
+  [GitHub](https://github.com/kiper-acab) | [Telegram](https://t.me/KIPERQW)
 
 - **Харазян Левон**  
   [Telegram](https://t.me/l_kharazyan)
