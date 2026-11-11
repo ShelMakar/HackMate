@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Тесты и документация
+tests/
+docs/
+*.md
+README.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Временные файлы
+*.tmp
+temp/
