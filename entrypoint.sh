@@ -1,6 +1,11 @@
 #!/bin/sh
+
 set -e
 
-python hackmate/manage.py migrate --noinput
+cd /app/hackmate
+
+mkdir -p data
+
+python manage.py migrate --noinput
 
 exec "$@"

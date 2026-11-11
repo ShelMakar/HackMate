@@ -10,9 +10,11 @@ COPY hackmate/ ./hackmate/
 RUN python hackmate/manage.py collectstatic --noinput
 
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN sed -i 's/\r$//' /entrypoint.sh && \
+    chmod +x /entrypoint.sh
 
 EXPOSE 8000
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["gunicorn", "--chdir", "/app/hackmate", "hackmate.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "2", "--access-logfile", "-", "--error-logfile", "-"]
+
+CMD ["python", "/app/hackmate/manage.py", "runserver", "0.0.0.0:8000"]

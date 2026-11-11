@@ -180,51 +180,21 @@ class SignUpView(django.views.generic.FormView):
 
     def form_valid(self, form):
         user = form.save(commit=False)
+
         user.email = users.models.UserManager().normalize_email(
             form.cleaned_data["email"],
         )
         user.set_password(form.cleaned_data["password1"])
-
-        if django.conf.settings.DEFAULT_USER_IS_ACTIVE:
-            user.is_active = True
-        else:
-            user.is_active = False
-            url = django.urls.reverse("users:activate", args=[user.username])
-            domain = self.request.get_host()
-            confirmation_link = (
-                django.utils.translation.gettext_lazy(
-                    "Чтобы подтвердить аккаунт перейдите по ссылке ",
-                )
-                + f"http://{domain}{url}"
-            )
-
-            django.core.mail.send_mail(
-                django.utils.translation.gettext_lazy("Activate your account"),
-                confirmation_link,
-                django.conf.settings.EMAIL_HOST_USER,
-                [user.email],
-                fail_silently=False,
-            )
+        user.is_active = True
 
         user.save()
 
         django.contrib.messages.success(
             self.request,
-            django.utils.translation.gettext_lazy(
-                "Пользователь успешно создан",
-            ),
-        )
-        django.contrib.messages.info(
-            self.request,
-            django.utils.translation.gettext_lazy(
-                "Активируйте профиль в письме, которое придет вам на почту",
-            ),
+            "Вы успешно зарегистрировались! Теперь можете войти.",
         )
 
         return super().form_valid(form)
-
-    def form_invalid(self, form):
-        return self.render_to_response(self.get_context_data(form=form))
 
 
 class ActivateUserView(django.views.View):
