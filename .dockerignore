@@ -38,3 +38,10 @@ Thumbs.db
 # Временные файлы
 *.tmp
 temp/
+.venv
+.env.*
+.env
+*.sqlite3
+media/
+uploads/
+staticfiles/
