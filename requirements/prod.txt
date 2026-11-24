@@ -10,3 +10,4 @@ python-dotenv==1.0.1
 sorl-thumbnail==12.11.0
 whitenoise==6.8.2
 setuptools
+psycopg[binary]
